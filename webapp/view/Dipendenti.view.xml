@@ -4,32 +4,40 @@
 			<pages>
 				<Page id="page" title="{i18n>appTitle}">
 					<content>
-						<Panel class="sapUiContentPadding" width="auto">
+						<Panel class="sapUiResponsiveMargin" width="auto">
 							<Table id="idDipendentiTable" alternateRowColors="true" class="sapUiResponsiveMargin" width="auto"
-								items="{path:'dip>/dipendenteSet',sorter:{path:'CID'}}">
+								items="{path:'dip>/dipendenteSet'}">
 								<headerToolbar>
-									<Toolbar>
+									<OverflowToolbar>
 										<Title text="Employees" level="H2"/>
 										<ToolbarSpacer/>
-										<SearchField width="50%" search=".onFilterEmployees"/>
+										<Button
+											tooltip="Sort"
+											icon="sap-icon://sort"
+											press="handleSortButtonPressed" />
+										<Button
+											tooltip="Filter"
+											icon="sap-icon://filter"
+											press="handleFilterButtonPressed" />
+										<Button
+											tooltip="Group"
+											icon="sap-icon://group-2"
+											press="handleGroupButtonPressed" />
 										<Button icon="sap-icon://download" press="onDataExport"/>
-									</Toolbar>
+									</OverflowToolbar>
 								</headerToolbar>
 								<columns>
-									<Column width="auto">
+									<Column width="auto" minScreenWidth="Tablet" demandPopin="false">
 										<Text text="{i18n>CID}"/>
 									</Column>
-									<Column width="auto">
-										<Text text="{i18n>Badge}"/>
-									</Column>
-									<Column width="auto" minScreenWidth="Tablet">
+									<Column width="auto" minScreenWidth="Small" demandPopin="true">
 										<Text text="{i18n>NomeCompleto}"/>
 									</Column>
 									<Column width="auto" minScreenWidth="Tablet">
 										<Text text="{i18n>Mansione}"/>
 									</Column>
-									<Column width="auto" minScreenWidth="Tablet">
-										<Text text="{i18n>Responsabile}"/>
+									<Column width="auto" minScreenWidth="Small" demandPopin="true">
+										<Text text="{i18n>UnitaOrg}"/>
 									</Column>
 								</columns>
 								<items>
@@ -38,10 +46,9 @@
 										press=".onPress">
 										<cells>
 											<Text text="{dip>CID}"/>
-											<Text text="{dip>BADGE}"/>
 											<Text text="{dip>COGNOME} {dip>NOME}"/>
 											<Text text="{dip>MANSIONE}"/>
-											<Text text="{dip>RESPONSABILE_COGNOME} {dip>RESPONSABILE_NOME}"/>
+											<Text text="{dip>UNITA_ORGANIZZATIVA}"/>
 										</cells>
 									</ColumnListItem>
 								</items>

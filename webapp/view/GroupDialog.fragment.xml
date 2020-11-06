@@ -1,0 +1,11 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<ViewSettingsDialog
+		confirm="handleGroupDialogConfirm">
+		<groupItems>
+			<ViewSettingsItem text="Mansione" key="MANSIONE" />
+			<ViewSettingsItem text="Unità Organizzativa" key="UNITA_ORGANIZZATIVA" />
+		</groupItems>
+	</ViewSettingsDialog>
+</core:FragmentDefinition>

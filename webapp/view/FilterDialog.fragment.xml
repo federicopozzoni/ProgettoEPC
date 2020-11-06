@@ -1,0 +1,33 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<ViewSettingsDialog
+		confirm="handleFilterDialogConfirm">
+		<filterItems>
+			<ViewSettingsFilterItem
+				text="Mansione"
+				key="Mansione"
+				multiSelect="true">
+				<items>
+					<ViewSettingsItem text="Operaio" key="Operaio" />
+					<ViewSettingsItem text="Worker" key="Worker" />
+					<ViewSettingsItem text="Worker A" key="Worker_A" />
+					<ViewSettingsItem text="Manager" key="Manager" />
+					<ViewSettingsItem text="Supervisore" key="Supervisore" />
+				</items>
+			</ViewSettingsFilterItem>
+			<ViewSettingsFilterItem
+				text="Unita Organizzativa"
+				key="unita"
+				multiSelect="true">
+				<items>
+					<ViewSettingsItem text="OP.SCAVI" key="OP.SCAVI" />
+					<ViewSettingsItem text="Excavations" key="Excavations" />
+					<ViewSettingsItem text="Work at Height" key="Work_at_Height" />
+					<ViewSettingsItem text="Height dept." key="Height dept." />
+					<ViewSettingsItem text="SUP.SCAVI" key="SUP.SCAVI" />
+				</items>
+			</ViewSettingsFilterItem>
+		</filterItems>
+	</ViewSettingsDialog>
+</core:FragmentDefinition>

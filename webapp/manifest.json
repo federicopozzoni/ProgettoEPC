@@ -18,7 +18,8 @@
 				"uri": "/DB_HANA_NEW/totem/services/data.xsodata/",
 				"type": "OData",
 				"settings": {
-					"localUri": "localService/metadata.xml"
+					"localUri": "localService/metadata.xml",
+					"annotations": []
 				}
 			}
 		}
@@ -45,7 +46,7 @@
 			"viewName": "progettoEPC.Nuovo.view.Dipendenti",
 			"type": "XML",
 			"async": true,
-			"id": "Dipendenti"
+			"id": ""
 		},
 		"dependencies": {
 			"minUI5Version": "1.65.6",
@@ -95,9 +96,7 @@
 			"routes": [{
 				"name": "RouteDipendenti",
 				"pattern": "RouteDipendenti",
-				"target": [
-					"TargetDipendenti"
-				]
+				"target": ["TargetDipendenti"]
 			}, {
 				"pattern": "detail/{dipPath}",
 				"name": "detail",

@@ -1,0 +1,12 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<ViewSettingsDialog
+		confirm="handleSortDialogConfirm">
+		<sortItems>
+			<ViewSettingsItem text="CID" key="CID" selected="true" />
+			<ViewSettingsItem text="Nome Dipendente" key="COGNOME" />
+			<ViewSettingsItem text="Mansione" key="MANSIONE" />
+		</sortItems>
+	</ViewSettingsDialog>
+</core:FragmentDefinition>
