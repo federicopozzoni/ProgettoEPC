@@ -1,0 +1,55 @@
+<mvc:View controllerName="progettoEPC.Nuovo.controller.Dipendenti" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>appTitle}">
+					<content>
+						<Panel class="sapUiContentPadding" width="auto">
+							<Table id="idDipendentiTable" alternateRowColors="true" class="sapUiResponsiveMargin" width="auto"
+								items="{path:'dip>/dipendenteSet',sorter:{path:'CID'}}">
+								<headerToolbar>
+									<Toolbar>
+										<Title text="Employees" level="H2"/>
+										<ToolbarSpacer/>
+										<SearchField width="50%" search=".onFilterEmployees"/>
+										<Button icon="sap-icon://download" press="onDataExport"/>
+									</Toolbar>
+								</headerToolbar>
+								<columns>
+									<Column width="auto">
+										<Text text="{i18n>CID}"/>
+									</Column>
+									<Column width="auto">
+										<Text text="{i18n>Badge}"/>
+									</Column>
+									<Column width="auto" minScreenWidth="Tablet">
+										<Text text="{i18n>NomeCompleto}"/>
+									</Column>
+									<Column width="auto" minScreenWidth="Tablet">
+										<Text text="{i18n>Mansione}"/>
+									</Column>
+									<Column width="auto" minScreenWidth="Tablet">
+										<Text text="{i18n>Responsabile}"/>
+									</Column>
+								</columns>
+								<items>
+									<ColumnListItem
+										type="Navigation"
+										press=".onPress">
+										<cells>
+											<Text text="{dip>CID}"/>
+											<Text text="{dip>BADGE}"/>
+											<Text text="{dip>COGNOME} {dip>NOME}"/>
+											<Text text="{dip>MANSIONE}"/>
+											<Text text="{dip>RESPONSABILE_COGNOME} {dip>RESPONSABILE_NOME}"/>
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+						</Panel>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
